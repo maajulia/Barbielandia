@@ -1,0 +1,31 @@
+POST http://localhost:3333/boneca
+Content-Type: application/json
+
+{
+    "coleção": "Coleção 01",
+    "marca": "Marca 01",
+    "descrição": "Barbie"
+}
+
+###
+
+GET http://localhost:3333/boneca
+
+###
+
+GET http://localhost:3333/boneca?search=MATTEL
+
+###
+ 
+PUT http://localhost:3333/bonecas
+Content-Type: application/json
+
+{
+     "coleção": "Boneca de Coleção de Patins",
+    "marca": "Mattel",
+    "descrição": "Ela usa um collant colorido com uma viseira rosa choque, shorts de ciclista combinando e patins inline Impala neon. Semelhante à Barbie interpretada no filme,"
+}
+
+###
+
+DELETE http://localhost:3333/bonecas/
