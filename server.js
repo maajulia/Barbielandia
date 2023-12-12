@@ -10,15 +10,15 @@ server.get('/', () => {
 
 server.post('/boneca', (request, reply) => {
 // Acessando dados do corpo da requisição
-    const {coleção, marca, descrição} = request.body
+    const {coleçao, marca, descricao} = request.body
 // Exibindo dados
 //    console.log(body)
    
     // return 'cadastrar'
     database.create({
-        coleção: coleção,
+        colecao: colecao,
         marca: marca,
-        descrição: descrição,
+        descricao: descricao,
     })
 
     return reply.status(201).send
@@ -28,17 +28,17 @@ server.get('/boneca', (request) => {
     const search = request.query.search
     console.log(search)
     const bonecas = database.list(search)
-    //console.log(bonecas)
+    console.log(bonecas)
     return bonecas
 })
 
 server.put('/bonecas/:id', (request, reply) => {
     const bonecaId = request.params.id
-    const {coleção, marca, descrição} = request.body
+    const {colecao, marca, descricao} = request.body
     const boneca = database.update(bonecaId, {
-        coleção: coleção,
+        colecao: colecao,
         marca: marca,
-        descrição: descrição,
+        descricao: descricao,
     })
     return reply.status(204).send()
 })

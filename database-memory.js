@@ -4,7 +4,7 @@ export class DatabaseMemory{
 #bonecas = new Map()
 
 list(search){
-    return Array.from(this.#bonecas.entries()).map((l=bonecasArray) =>{
+    return Array.from(this.#bonecas.entries()).map((bonecasArray) =>{
     // acessando primeira posição
         const id = bonecasArray[0]
         const data = bonecasArray[1]
@@ -16,7 +16,7 @@ list(search){
     })
     .filter(boneca => {
         if (search){
-            return boneca.coleção.includes(search)
+            return boneca.colecao.includes(search)
         }
         return true
     })
