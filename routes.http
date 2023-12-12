@@ -17,15 +17,15 @@ GET http://localhost:3333/boneca?search=MATTEL
 
 ###
  
-PUT http://localhost:3333/bonecas/
+PUT http://localhost:3333/bonecas/4589bd40-5875-4128-8de6-55d4e37c5d63
 Content-Type: application/json
 
 {
-     "colecao": "Boneca de Coleção de Patins",
+    "colecao": "Boneca de Coleção de Patins",
     "marca": "Mattel",
     "descricao": "Ela usa um collant colorido com uma viseira rosa choque, shorts de ciclista combinando e patins inline Impala neon. Semelhante à Barbie interpretada no filme,"
 }
 
 ###
 
-DELETE http://localhost:3333/bonecas/
+DELETE http://localhost:3333/bonecas/4589bd40-5875-4128-8de6-55d4e37c5d63

@@ -10,7 +10,7 @@ server.get('/', () => {
 
 server.post('/boneca', (request, reply) => {
 // Acessando dados do corpo da requisição
-    const {coleçao, marca, descricao} = request.body
+    const {colecao, marca, descricao} = request.body
 // Exibindo dados
 //    console.log(body)
    
